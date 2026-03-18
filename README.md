@@ -194,12 +194,16 @@ Console output shows `WARNING` and above only (keeping it clean during normal us
 
 ---
 
-## Running Tests (optional)
+## Local Development & Testing
 
+For offline testing, you can use the included mock server:
+
+1. **Start Mock Server**: `python mock_server.py`
+2. **Run Bot**: Set `BINANCE_BASE_URL="http://127.0.0.1:8000"` and run `python cli.py ...`
+
+Or run a full automated demo:
 ```bash
-# Quick dry-run smoke test – no credentials needed beyond validation
-python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001 --dry-run \
-              --api-key dummy --api-secret dummy
+python sample_run.py
 ```
 
 ---
