@@ -1,0 +1,4 @@
+2026-03-18 15:46:41 | DEBUG    | cli | Logger initialised → logs/cli_2026-03-18.log
+2026-03-18 15:46:41 | INFO     | cli | Dry-run: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.001'), 'price': None, 'stop_price': None}
+2026-03-18 15:46:44 | DEBUG    | cli | Logger initialised → logs/cli_2026-03-18.log
+2026-03-18 15:46:44 | WARNING  | cli | Validation failed: Price is required for this order type.

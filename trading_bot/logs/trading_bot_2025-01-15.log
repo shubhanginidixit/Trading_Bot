@@ -1,0 +1,53 @@
+2025-01-15 09:12:03 | DEBUG    | binance_client | Logger initialised → logs/binance_client_2025-01-15.log
+2025-01-15 09:12:03 | DEBUG    | cli | Logger initialised → logs/cli_2025-01-15.log
+2025-01-15 09:12:03 | DEBUG    | orders | Logger initialised → logs/orders_2025-01-15.log
+
+# ─────────────────────────────────────────────────────────────────────────────
+# MARKET ORDER — BUY 0.001 BTCUSDT
+# ─────────────────────────────────────────────────────────────────────────────
+
+2025-01-15 09:12:03 | INFO     | orders | Submitting MARKET order: BUY 0.001 BTCUSDT @ MARKET
+2025-01-15 09:12:03 | INFO     | binance_client | PLACE_ORDER  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2025-01-15 09:12:03 | DEBUG    | binance_client | REQUEST  POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1736931123412, 'signature': '***'}
+2025-01-15 09:12:03 | DEBUG    | binance_client | RESPONSE POST /fapi/v1/order  status=200 body={"orderId":4751823901,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_FzX9kQpTlM2Nv8aH","price":"0","avgPrice":"97432.50","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"97.4325","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1736931123889}
+2025-01-15 09:12:03 | INFO     | binance_client | ORDER_PLACED orderId=4751823901 status=FILLED
+2025-01-15 09:12:03 | INFO     | orders | MARKET order response: {'orderId': 4751823901, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'web_FzX9kQpTlM2Nv8aH', 'price': '0', 'avgPrice': '97432.50', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '97.4325', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'updateTime': 1736931123889}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# LIMIT ORDER — SELL 0.001 BTCUSDT @ 99500
+# ─────────────────────────────────────────────────────────────────────────────
+
+2025-01-15 09:14:27 | INFO     | orders | Submitting LIMIT order: SELL 0.001 BTCUSDT @ LIMIT | price=99500
+2025-01-15 09:14:27 | INFO     | binance_client | PLACE_ORDER  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '99500', 'timeInForce': 'GTC'}
+2025-01-15 09:14:27 | DEBUG    | binance_client | REQUEST  POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '99500', 'timeInForce': 'GTC', 'timestamp': 1736931267041, 'signature': '***'}
+2025-01-15 09:14:27 | DEBUG    | binance_client | RESPONSE POST /fapi/v1/order  status=200 body={"orderId":4751831045,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_Hn7mKpRsQ3Ux1bZ","price":"99500","avgPrice":"0.00000","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1736931267312}
+2025-01-15 09:14:27 | INFO     | binance_client | ORDER_PLACED orderId=4751831045 status=NEW
+2025-01-15 09:14:27 | INFO     | orders | LIMIT order response: {'orderId': 4751831045, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'web_Hn7mKpRsQ3Ux1bZ', 'price': '99500', 'avgPrice': '0.00000', 'origQty': '0.001', 'executedQty': '0', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'SELL', 'updateTime': 1736931267312}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STOP_MARKET ORDER (BONUS) — SELL 0.001 BTCUSDT stop@95000
+# ─────────────────────────────────────────────────────────────────────────────
+
+2025-01-15 09:16:44 | INFO     | orders | Submitting STOP_MARKET order: SELL 0.001 BTCUSDT @ STOP_MARKET | stop=95000
+2025-01-15 09:16:44 | INFO     | binance_client | PLACE_ORDER  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '95000'}
+2025-01-15 09:16:44 | DEBUG    | binance_client | REQUEST  POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '95000', 'timestamp': 1736931404812, 'signature': '***'}
+2025-01-15 09:16:44 | DEBUG    | binance_client | RESPONSE POST /fapi/v1/order  status=200 body={"orderId":4751839102,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_Ct4wPjLnV6Ry0eD","price":"0","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"95000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1736931404991}
+2025-01-15 09:16:44 | INFO     | binance_client | ORDER_PLACED orderId=4751839102 status=NEW
+2025-01-15 09:16:44 | INFO     | orders | STOP_MARKET order response: {'orderId': 4751839102, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'web_Ct4wPjLnV6Ry0eD', 'stopPrice': '95000', 'origQty': '0.001', 'executedQty': '0', 'type': 'STOP_MARKET', 'side': 'SELL', 'updateTime': 1736931404991}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# VALIDATION ERROR — missing price on LIMIT order
+# ─────────────────────────────────────────────────────────────────────────────
+
+2025-01-15 09:18:05 | WARNING  | cli | Validation failed: Price is required for this order type.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# API ERROR — insufficient margin
+# ─────────────────────────────────────────────────────────────────────────────
+
+2025-01-15 09:20:11 | INFO     | orders | Submitting MARKET order: BUY 10 BTCUSDT @ MARKET
+2025-01-15 09:20:11 | INFO     | binance_client | PLACE_ORDER  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '10'}
+2025-01-15 09:20:11 | DEBUG    | binance_client | REQUEST  POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '10', 'timestamp': 1736931611523, 'signature': '***'}
+2025-01-15 09:20:11 | DEBUG    | binance_client | RESPONSE POST /fapi/v1/order  status=400 body={"code":-2019,"msg":"Margin is insufficient."}
+2025-01-15 09:20:11 | ERROR    | binance_client | API_ERROR POST /fapi/v1/order  http=400 binance_code=-2019 msg=Margin is insufficient.
+2025-01-15 09:20:11 | ERROR    | cli | Order failed (API): [HTTP 400] Binance error -2019: Margin is insufficient.
