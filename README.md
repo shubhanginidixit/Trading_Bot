@@ -203,3 +203,5 @@ python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 requests>=2.31.0
 flask>=3.0.0
 ```
+##Contributor
+*Shubhangini Dixit
